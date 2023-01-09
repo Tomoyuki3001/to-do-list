@@ -1,0 +1,27 @@
+import React from "react";
+import { Icon } from "@iconify/react";
+
+const style = {
+  li: `flex justify-between bg-slate p-4 my-2 capitalize`,
+  liComplete: `flex justify-between  p-4 my-2 capitalize`,
+  row: `flex`,
+  text: `ml-2 cursor-pointer`,
+  textComplete: `ml-2 cursor-pointer line-through`,
+  button: `cursor-pointer flex items-center`,
+};
+
+function Todo({ todo }) {
+  return (
+    <li className={style.li}>
+      <div className={style.row}>
+        <input type="checkbox" />
+        <p className={style.text}>{todo}</p>
+      </div>
+      <button>
+        <Icon icon="mdi:trash-can-outline" width="30" height="30" />
+      </button>
+    </li>
+  );
+}
+
+export default Todo;
